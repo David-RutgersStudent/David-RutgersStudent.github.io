@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>David Sobelman | Finance Portfolio</title>
+    <title>David's Portfolio</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -20,7 +26,9 @@
             line-height: 1.6;
         }
 
+
         /* NAVIGATION */
+
         nav {
             background-color: white;
             padding: 18px 8%;
@@ -39,6 +47,11 @@
             color: #cc0033;
         }
 
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
         .nav-links a {
             color: #333;
             text-decoration: none;
@@ -50,7 +63,9 @@
             color: #cc0033;
         }
 
+
         /* HERO SECTION */
+
         .hero {
             max-width: 1150px;
             margin: auto;
@@ -64,6 +79,38 @@
         .hero-text {
             max-width: 750px;
         }
+
+        .hero-info {
+            min-width: 250px;
+            text-align: center;
+        }
+
+
+        /* HEADSHOT */
+
+        .headshot {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 18px auto;
+            border: 5px solid white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+
+        .hero-info h2 {
+            font-size: 24px;
+        }
+
+        .hero-info .school {
+            color: #cc0033;
+            font-weight: bold;
+        }
+
+
+        /* HERO TEXT */
 
         .tag {
             display: inline-block;
@@ -88,33 +135,8 @@
             margin-bottom: 28px;
         }
 
-        .hero-info {
-            min-width: 240px;
-            text-align: center;
-        }
 
-        .initial-circle {
-            width: 150px;
-            height: 150px;
-            background-color: #cc0033;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 52px;
-            font-weight: bold;
-            margin: auto auto 18px;
-        }
-
-        .hero-info h2 {
-            font-size: 24px;
-        }
-
-        .hero-info .school {
-            color: #cc0033;
-            font-weight: bold;
-        }
+        /* BUTTONS */
 
         .button {
             display: inline-block;
@@ -137,7 +159,15 @@
             border: 1px solid #ccc;
         }
 
+        .secondary-button:hover {
+            background-color: #cc0033;
+            color: white;
+            border-color: #cc0033;
+        }
+
+
         /* GENERAL SECTIONS */
+
         section {
             padding: 75px 8%;
         }
@@ -162,7 +192,9 @@
             max-width: 750px;
         }
 
+
         /* SKILLS */
+
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -184,7 +216,9 @@
             color: #555;
         }
 
+
         /* PROJECTS */
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -198,6 +232,12 @@
             border: 1px solid #ddd;
             display: flex;
             flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
         }
 
         .project-number {
@@ -227,7 +267,9 @@
             text-decoration: underline;
         }
 
+
         /* ABOUT */
+
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -244,7 +286,9 @@
             margin-bottom: 10px;
         }
 
+
         /* FOOTER */
+
         footer {
             background-color: #1f2937;
             color: white;
@@ -256,11 +300,15 @@
             color: white;
         }
 
+
         /* MOBILE */
+
         @media (max-width: 850px) {
+
             .hero {
-                flex-direction: column-reverse;
+                flex-direction: column;
                 text-align: center;
+                padding-top: 60px;
             }
 
             .hero h1 {
@@ -282,39 +330,83 @@
                 font-size: 14px;
             }
         }
+
     </style>
 </head>
 
+
 <body>
 
+
     <!-- NAVIGATION -->
+
     <nav>
-        <div class="logo">DS | Finance Portfolio</div>
+
+        <div class="logo">
+            David's Portfolio
+        </div>
 
         <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#skills">
+                Skills
+            </a>
+
+            <a href="#projects">
+                Projects
+            </a>
+
         </div>
+
     </nav>
 
 
+
     <!-- HERO / PERSONAL STATEMENT -->
+
     <div class="hero">
 
-        <div class="hero-info">
-            <div class="initial-circle">DS</div>
 
-            <h2>David Sobelman</h2>
-            <div class="school">Rutgers Business School</div>
-            <div>Finance | Class of 2028</div>
+        <!-- HEADSHOT -->
+
+        <div class="hero-info">
+
+            <img
+                src="headshot.jpg"
+                alt="David Sobelman"
+                class="headshot">
+
+            <h2>
+                David Sobelman
+            </h2>
+
+            <div class="school">
+                Rutgers Business School
+            </div>
+
+            <div>
+                Finance | Class of 2028
+            </div>
+
         </div>
+
+
+
+        <!-- PERSONAL STATEMENT -->
 
         <div class="hero-text">
 
-            <div class="tag">Finance Student at Rutgers Business School</div>
+            <div class="tag">
+                Finance Student at Rutgers Business School
+            </div>
 
-            <h1>Finance, analytics, and emerging technology.</h1>
+            <h1>
+                Finance, analytics, and emerging technology.
+            </h1>
 
             <p>
                 Finance student at Rutgers Business School with experience in
@@ -322,78 +414,132 @@
                 mortgage-backed securities analysis.
             </p>
 
-            <a class="button"
-               href="https://www.linkedin.com/in/david-sobelman-01631634a"
-               target="_blank">
-               LinkedIn Profile
+
+            <a
+                class="button"
+                href="https://www.linkedin.com/in/david-sobelman-01631634a"
+                target="_blank">
+
+                LinkedIn Profile
+
             </a>
 
-            <a class="button secondary-button"
-               href="mailto:Sobelone1@gmail.com">
-               Email Me
+
+            <a
+                class="button secondary-button"
+                href="mailto:Sobelone1@gmail.com">
+
+                Email Me
+
             </a>
 
         </div>
+
     </div>
 
 
+
     <!-- SKILLS -->
-    <section class="white-section" id="skills">
+
+    <section
+        class="white-section"
+        id="skills">
 
         <div class="section-container">
 
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title">
+                Skills
+            </h2>
 
             <p class="section-description">
                 Technical, analytical, and financial skills developed through
                 coursework and professional experience.
             </p>
 
+
             <div class="skills-grid">
 
+
                 <div class="skill-card">
-                    <h3>Finance & Analytics</h3>
+
+                    <h3>
+                        Finance & Analytics
+                    </h3>
+
                     <p>
-                        Financial Modeling<br>
-                        Data Analysis<br>
-                        Mortgage-Backed Securities (MBS)<br>
-                        Prepayment Analysis<br>
-                        Credit Analysis<br>
+                        Financial Modeling
+                        <br>
+                        Data Analysis
+                        <br>
+                        Mortgage-Backed Securities (MBS)
+                        <br>
+                        Prepayment Analysis
+                        <br>
+                        Credit Analysis
+                        <br>
                         Time-Series Analysis
                     </p>
+
                 </div>
 
+
+
                 <div class="skill-card">
-                    <h3>Technology</h3>
+
+                    <h3>
+                        Technology
+                    </h3>
+
                     <p>
-                        Microsoft Excel<br>
-                        Bloomberg<br>
-                        LibreChat<br>
+                        Microsoft Excel
+                        <br>
+                        Bloomberg
+                        <br>
+                        LibreChat
+                        <br>
                         Anthropic Claude
                     </p>
+
                 </div>
+
+
 
                 <div class="skill-card">
-                    <h3>AI & Data</h3>
+
+                    <h3>
+                        AI & Data
+                    </h3>
+
                     <p>
-                        AI Agent Development<br>
-                        Prompt Engineering<br>
-                        AI-Driven Financial Analytics<br>
+                        AI Agent Development
+                        <br>
+                        Prompt Engineering
+                        <br>
+                        AI-Driven Financial Analytics
+                        <br>
                         Business Validation
                     </p>
+
                 </div>
 
+
             </div>
+
         </div>
+
     </section>
 
 
+
     <!-- PROJECTS -->
+
     <section id="projects">
 
         <div class="section-container">
 
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">
+                Featured Projects
+            </h2>
 
             <p class="section-description">
                 Selected projects and demonstrations from my experience working
@@ -401,14 +547,21 @@
                 artificial intelligence.
             </p>
 
+
             <div class="projects-grid">
 
+
                 <!-- PROJECT 1 -->
+
                 <div class="project-card">
 
-                    <div class="project-number">PROJECT 01</div>
+                    <div class="project-number">
+                        PROJECT 01
+                    </div>
 
-                    <h3>AI-Powered Prepayment Analysis</h3>
+                    <h3>
+                        AI-Powered Prepayment Analysis
+                    </h3>
 
                     <p>
                         Created a video demonstration showcasing an AI agent's
@@ -417,21 +570,30 @@
                         mortgage analytics.
                     </p>
 
-                    <a class="project-link"
-                       href="https://www.linkedin.com/pulse/ai-mbs-trading-prepayment-agent-part-5-michael-pyatski-ph-d-cfa-9i94c"
-                       target="_blank">
-                       View Newsletter & Demo →
+                    <a
+                        class="project-link"
+                        href="https://www.linkedin.com/pulse/ai-mbs-trading-prepayment-agent-part-5-michael-pyatski-ph-d-cfa-9i94c"
+                        target="_blank">
+
+                        View Newsletter & Demo →
+
                     </a>
 
                 </div>
 
 
+
                 <!-- PROJECT 2 -->
+
                 <div class="project-card">
 
-                    <div class="project-number">PROJECT 02</div>
+                    <div class="project-number">
+                        PROJECT 02
+                    </div>
 
-                    <h3>Mortgage Bond AI Agent</h3>
+                    <h3>
+                        Mortgage Bond AI Agent
+                    </h3>
 
                     <p>
                         Created a video demonstration of an AI-powered mortgage
@@ -440,21 +602,30 @@
                         plain-English prompts.
                     </p>
 
-                    <a class="project-link"
-                       href="https://www.linkedin.com/pulse/mortgage-bond-agent-michael-pyatski-ph-d-cfa-in6sc"
-                       target="_blank">
-                       View Newsletter & Demo →
+                    <a
+                        class="project-link"
+                        href="https://www.linkedin.com/pulse/mortgage-bond-agent-michael-pyatski-ph-d-cfa-in6sc"
+                        target="_blank">
+
+                        View Newsletter & Demo →
+
                     </a>
 
                 </div>
 
 
+
                 <!-- PROJECT 3 -->
+
                 <div class="project-card">
 
-                    <div class="project-number">PROJECT 03</div>
+                    <div class="project-number">
+                        PROJECT 03
+                    </div>
 
-                    <h3>Build Your Own AI Agent</h3>
+                    <h3>
+                        Build Your Own AI Agent
+                    </h3>
 
                     <p>
                         Created a video demonstration highlighting the process
@@ -463,46 +634,77 @@
                         exploration.
                     </p>
 
-                    <a class="project-link"
-                       href="https://www.linkedin.com/pulse/ai-mbs-trading-build-your-own-agent-part-3-pyatski-ph-d-cfa-5s5fc"
-                       target="_blank">
-                       View Newsletter & Demo →
+                    <a
+                        class="project-link"
+                        href="https://www.linkedin.com/pulse/ai-mbs-trading-build-your-own-agent-part-3-pyatski-ph-d-cfa-5s5fc"
+                        target="_blank">
+
+                        View Newsletter & Demo →
+
                     </a>
 
                 </div>
 
+
             </div>
+
         </div>
+
     </section>
 
 
-    <!-- ABOUT -->
-    <section class="white-section" id="about">
+
+    <!-- ABOUT ME -->
+
+    <section
+        class="white-section"
+        id="about">
 
         <div class="section-container">
 
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">
+                About Me
+            </h2>
 
             <p class="section-description">
                 My academic and professional background.
             </p>
 
+
             <div class="about-grid">
 
+
                 <div class="about-box">
-                    <h3>Education</h3>
+
+                    <h3>
+                        Education
+                    </h3>
 
                     <p>
-                        <strong>Rutgers University</strong><br>
-                        Rutgers Business School – New Brunswick<br>
-                        Bachelor of Science in Finance<br>
-                        Expected Graduation: May 2028<br>
+                        <strong>Rutgers University</strong>
+                        <br>
+
+                        Rutgers Business School – New Brunswick
+                        <br>
+
+                        Bachelor of Science in Finance
+                        <br>
+
+                        Expected Graduation: May 2028
+                        <br>
+
                         GPA: 3.9
                     </p>
+
                 </div>
 
+
+
                 <div class="about-box">
-                    <h3>Professional Interests</h3>
+
+                    <h3>
+                        Professional Interests
+                    </h3>
 
                     <p>
                         I am interested in financial markets, investment
@@ -510,22 +712,39 @@
                         application of emerging technologies such as artificial
                         intelligence within finance.
                     </p>
+
                 </div>
 
+
             </div>
+
         </div>
+
     </section>
 
 
+
     <!-- FOOTER -->
+
     <footer>
+
         <p>
             © 2026 David Sobelman |
             Rutgers Business School |
-            <a href="https://www.linkedin.com/in/david-sobelman-01631634a"
-               target="_blank">LinkedIn</a>
+
+            <a
+                href="https://www.linkedin.com/in/david-sobelman-01631634a"
+                target="_blank">
+
+                LinkedIn
+
+            </a>
+
         </p>
+
     </footer>
 
+
 </body>
+
 </html>
